@@ -1,3 +1,6 @@
+
+import java.awt.Color;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,7 +12,6 @@
  * @author nauzetaduen
  */
 public class MainFrame extends javax.swing.JFrame {
-
     /**
      * Creates new form MainFrame
      */
@@ -50,6 +52,7 @@ public class MainFrame extends javax.swing.JFrame {
         toogleInt = new javax.swing.JToggleButton();
         toogleStr = new javax.swing.JToggleButton();
         toogleDex = new javax.swing.JToggleButton();
+        totalLabel = new javax.swing.JLabel();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         loadMenuItem = new javax.swing.JMenuItem();
@@ -137,22 +140,76 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(combo6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(combo7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         statsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Stats"));
 
         intLabel.setText("Int");
 
+        intSlider.setMinimum(25);
+        intSlider.setValue(25);
+        intSlider.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        intSlider.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                intSliderStateChanged(evt);
+            }
+        });
+
+        intTextField.setText("25");
+        intTextField.setDisabledTextColor(java.awt.Color.black);
+        intTextField.setEnabled(false);
+
         strLabel.setText("Str");
+
+        strSlider.setMinimum(25);
+        strSlider.setValue(25);
+        strSlider.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                strSliderStateChanged(evt);
+            }
+        });
+
+        strTextField.setText("25");
+        strTextField.setDisabledTextColor(java.awt.Color.black);
+        strTextField.setEnabled(false);
 
         dexLabel.setText("Dex");
 
+        dexSlider.setMinimum(25);
+        dexSlider.setValue(25);
+        dexSlider.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                dexSliderStateChanged(evt);
+            }
+        });
+
+        dexTextField.setText("25");
+        dexTextField.setDisabledTextColor(java.awt.Color.black);
+        dexTextField.setEnabled(false);
+
         toogleInt.setText("L");
+        toogleInt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                toogleIntActionPerformed(evt);
+            }
+        });
 
         toogleStr.setText("L");
+        toogleStr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                toogleStrActionPerformed(evt);
+            }
+        });
 
         toogleDex.setText("L");
+        toogleDex.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                toogleDexActionPerformed(evt);
+            }
+        });
+
+        totalLabel.setText("Total: 225");
 
         javax.swing.GroupLayout statsPanelLayout = new javax.swing.GroupLayout(statsPanel);
         statsPanel.setLayout(statsPanelLayout);
@@ -164,27 +221,28 @@ public class MainFrame extends javax.swing.JFrame {
                     .addGroup(statsPanelLayout.createSequentialGroup()
                         .addComponent(intSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(intTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                        .addComponent(intTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(toogleInt, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(statsPanelLayout.createSequentialGroup()
-                        .addGroup(statsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(intLabel)
-                            .addComponent(strLabel)
-                            .addComponent(dexLabel))
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(statsPanelLayout.createSequentialGroup()
                         .addComponent(strSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(strTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(strTextField)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(toogleStr, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(statsPanelLayout.createSequentialGroup()
                         .addComponent(dexSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(dexTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(toogleDex, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(dexTextField)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(toogleDex, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(statsPanelLayout.createSequentialGroup()
+                        .addGroup(statsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(intLabel)
+                            .addComponent(strLabel)
+                            .addComponent(dexLabel)
+                            .addComponent(totalLabel))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         statsPanelLayout.setVerticalGroup(
@@ -217,7 +275,9 @@ public class MainFrame extends javax.swing.JFrame {
                         .addComponent(dexLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(dexSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(totalLabel)
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
         fileMenu.setText("File");
@@ -273,12 +333,63 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(skillsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(statsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void intSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_intSliderStateChanged
+        
+            intTextField.setText(String.valueOf(intSlider.getValue()));
+            setTotal(intSlider.getValue() + strSlider.getValue() + dexSlider.getValue());
+        
+        
+    }//GEN-LAST:event_intSliderStateChanged
+
+    private void strSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_strSliderStateChanged
+            strTextField.setText(String.valueOf(strSlider.getValue()));
+            setTotal(intSlider.getValue() + strSlider.getValue() + dexSlider.getValue());
+        
+    }//GEN-LAST:event_strSliderStateChanged
+
+    private void dexSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_dexSliderStateChanged
+            dexTextField.setText(String.valueOf(dexSlider.getValue()));
+            setTotal(intSlider.getValue() + strSlider.getValue() + dexSlider.getValue());
+    }//GEN-LAST:event_dexSliderStateChanged
+
+    private void toogleIntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toogleIntActionPerformed
+        if (toogleInt.isSelected()){
+            intSlider.setEnabled(false);
+        }else{
+            intSlider.setEnabled(true);
+        }
+    }//GEN-LAST:event_toogleIntActionPerformed
+
+    private void toogleStrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toogleStrActionPerformed
+        if (toogleStr.isSelected()){
+            strSlider.setEnabled(false);
+        }else{
+            strSlider.setEnabled(true);
+        }
+    }//GEN-LAST:event_toogleStrActionPerformed
+
+    private void toogleDexActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toogleDexActionPerformed
+        // TODO add your handling code here:
+        if (toogleDex.isSelected()){
+            dexSlider.setEnabled(false);
+        }else{
+            dexSlider.setEnabled(true);
+        }
+    }//GEN-LAST:event_toogleDexActionPerformed
+    private void setTotal(int total){
+        if (total > 225){
+            totalLabel.setForeground(Color.red);
+        }else{
+            totalLabel.setForeground(Color.black);
+        }
+        totalLabel.setText("Total: " + String.valueOf(total));
+    }
     /**
      * @param args the command line arguments
      */
@@ -347,6 +458,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JToggleButton toogleDex;
     private javax.swing.JToggleButton toogleInt;
     private javax.swing.JToggleButton toogleStr;
+    private javax.swing.JLabel totalLabel;
     private javax.swing.JMenuItem whoMenuItem;
     // End of variables declaration//GEN-END:variables
 }
