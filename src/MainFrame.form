@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Menu class="javax.swing.JMenuBar" name="menuBar">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="fileMenu">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="File"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="loadMenuItem">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="F1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Load Template"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="saveMenuItem">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="F2"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Save Template"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JPopupMenu$Separator" name="separatorMenuItems">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="deleteMenuItem">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="F9"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Delete Template"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="exitMenuItem">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Alt+F4"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Exit"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="helpMenu">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Help"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="whoMenuItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="whoami"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="menuBar"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="namePanel" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="skillsPanel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="statsPanel" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="namePanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="skillsPanel" max="32767" attributes="0"/>
+                  <Component id="statsPanel" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="namePanel">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="202" max="-2" attributes="0"/>
+                  <Component id="templateLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="templateTextField" min="-2" pref="145" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="templateTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="templateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="17" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="templateLabel">
+          <Properties>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Template&apos;s Name:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="templateTextField">
+          <Properties>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="skillsPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Skills">
+              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder/>
+              </Border>
+            </TitledBorder>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="combo1" min="-2" max="-2" attributes="0"/>
+                      <Component id="combo3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="combo2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="combo4" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="combo6" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="combo5" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="combo7" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="222" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="combo1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="combo2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="combo3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="combo4" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="combo5" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="combo6" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="combo7" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="114" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JComboBox" name="combo1">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="48">
+                <StringItem index="0" value="Alchemy"/>
+                <StringItem index="1" value="Anatomy"/>
+                <StringItem index="2" value="Animal Lore"/>
+                <StringItem index="3" value="Animal Taming"/>
+                <StringItem index="4" value="Archery"/>
+                <StringItem index="5" value="Arms Lore"/>
+                <StringItem index="6" value="Begging"/>
+                <StringItem index="7" value="Blacksmithy"/>
+                <StringItem index="8" value="Bowcraft/Fletching"/>
+                <StringItem index="9" value="Camping"/>
+                <StringItem index="10" value="Carpentry"/>
+                <StringItem index="11" value="Cartography"/>
+                <StringItem index="12" value="Cooking"/>
+                <StringItem index="13" value="Detecting Hidden"/>
+                <StringItem index="14" value="Discordance"/>
+                <StringItem index="15" value="Evaluating Inteligence"/>
+                <StringItem index="16" value="Fencing"/>
+                <StringItem index="17" value="Fishing"/>
+                <StringItem index="18" value="Forensic Evaluation"/>
+                <StringItem index="19" value="Healing"/>
+                <StringItem index="20" value="Herding"/>
+                <StringItem index="21" value="Hiding"/>
+                <StringItem index="22" value="Inscription"/>
+                <StringItem index="23" value="Item Identification"/>
+                <StringItem index="24" value="Lockpicking"/>
+                <StringItem index="25" value="Lumberjacking"/>
+                <StringItem index="26" value="Mace Fighting"/>
+                <StringItem index="27" value="Magery"/>
+                <StringItem index="28" value="Meditation"/>
+                <StringItem index="29" value="Mining"/>
+                <StringItem index="30" value="Musicianship"/>
+                <StringItem index="31" value="Parrying"/>
+                <StringItem index="32" value="Peacemaking"/>
+                <StringItem index="33" value="Poisoning"/>
+                <StringItem index="34" value="Provocation"/>
+                <StringItem index="35" value="Remove Trap"/>
+                <StringItem index="36" value="Resisting Spells"/>
+                <StringItem index="37" value="Snooping"/>
+                <StringItem index="38" value="Spirit Speak"/>
+                <StringItem index="39" value="Stealing"/>
+                <StringItem index="40" value="Swordsmanship"/>
+                <StringItem index="41" value="Tactics"/>
+                <StringItem index="42" value="Tailoring"/>
+                <StringItem index="43" value="Taste Identification"/>
+                <StringItem index="44" value="Tinkering"/>
+                <StringItem index="45" value="Tracking"/>
+                <StringItem index="46" value="Veterinary"/>
+                <StringItem index="47" value="Wrestling"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="combo3">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="48">
+                <StringItem index="0" value="Alchemy"/>
+                <StringItem index="1" value="Anatomy"/>
+                <StringItem index="2" value="Animal Lore"/>
+                <StringItem index="3" value="Animal Taming"/>
+                <StringItem index="4" value="Archery"/>
+                <StringItem index="5" value="Arms Lore"/>
+                <StringItem index="6" value="Begging"/>
+                <StringItem index="7" value="Blacksmithy"/>
+                <StringItem index="8" value="Bowcraft/Fletching"/>
+                <StringItem index="9" value="Camping"/>
+                <StringItem index="10" value="Carpentry"/>
+                <StringItem index="11" value="Cartography"/>
+                <StringItem index="12" value="Cooking"/>
+                <StringItem index="13" value="Detecting Hidden"/>
+                <StringItem index="14" value="Discordance"/>
+                <StringItem index="15" value="Evaluating Inteligence"/>
+                <StringItem index="16" value="Fencing"/>
+                <StringItem index="17" value="Fishing"/>
+                <StringItem index="18" value="Forensic Evaluation"/>
+                <StringItem index="19" value="Healing"/>
+                <StringItem index="20" value="Herding"/>
+                <StringItem index="21" value="Hiding"/>
+                <StringItem index="22" value="Inscription"/>
+                <StringItem index="23" value="Item Identification"/>
+                <StringItem index="24" value="Lockpicking"/>
+                <StringItem index="25" value="Lumberjacking"/>
+                <StringItem index="26" value="Mace Fighting"/>
+                <StringItem index="27" value="Magery"/>
+                <StringItem index="28" value="Meditation"/>
+                <StringItem index="29" value="Mining"/>
+                <StringItem index="30" value="Musicianship"/>
+                <StringItem index="31" value="Parrying"/>
+                <StringItem index="32" value="Peacemaking"/>
+                <StringItem index="33" value="Poisoning"/>
+                <StringItem index="34" value="Provocation"/>
+                <StringItem index="35" value="Remove Trap"/>
+                <StringItem index="36" value="Resisting Spells"/>
+                <StringItem index="37" value="Snooping"/>
+                <StringItem index="38" value="Spirit Speak"/>
+                <StringItem index="39" value="Stealing"/>
+                <StringItem index="40" value="Swordsmanship"/>
+                <StringItem index="41" value="Tactics"/>
+                <StringItem index="42" value="Tailoring"/>
+                <StringItem index="43" value="Taste Identification"/>
+                <StringItem index="44" value="Tinkering"/>
+                <StringItem index="45" value="Tracking"/>
+                <StringItem index="46" value="Veterinary"/>
+                <StringItem index="47" value="Wrestling"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="combo2">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="48">
+                <StringItem index="0" value="Alchemy"/>
+                <StringItem index="1" value="Anatomy"/>
+                <StringItem index="2" value="Animal Lore"/>
+                <StringItem index="3" value="Animal Taming"/>
+                <StringItem index="4" value="Archery"/>
+                <StringItem index="5" value="Arms Lore"/>
+                <StringItem index="6" value="Begging"/>
+                <StringItem index="7" value="Blacksmithy"/>
+                <StringItem index="8" value="Bowcraft/Fletching"/>
+                <StringItem index="9" value="Camping"/>
+                <StringItem index="10" value="Carpentry"/>
+                <StringItem index="11" value="Cartography"/>
+                <StringItem index="12" value="Cooking"/>
+                <StringItem index="13" value="Detecting Hidden"/>
+                <StringItem index="14" value="Discordance"/>
+                <StringItem index="15" value="Evaluating Inteligence"/>
+                <StringItem index="16" value="Fencing"/>
+                <StringItem index="17" value="Fishing"/>
+                <StringItem index="18" value="Forensic Evaluation"/>
+                <StringItem index="19" value="Healing"/>
+                <StringItem index="20" value="Herding"/>
+                <StringItem index="21" value="Hiding"/>
+                <StringItem index="22" value="Inscription"/>
+                <StringItem index="23" value="Item Identification"/>
+                <StringItem index="24" value="Lockpicking"/>
+                <StringItem index="25" value="Lumberjacking"/>
+                <StringItem index="26" value="Mace Fighting"/>
+                <StringItem index="27" value="Magery"/>
+                <StringItem index="28" value="Meditation"/>
+                <StringItem index="29" value="Mining"/>
+                <StringItem index="30" value="Musicianship"/>
+                <StringItem index="31" value="Parrying"/>
+                <StringItem index="32" value="Peacemaking"/>
+                <StringItem index="33" value="Poisoning"/>
+                <StringItem index="34" value="Provocation"/>
+                <StringItem index="35" value="Remove Trap"/>
+                <StringItem index="36" value="Resisting Spells"/>
+                <StringItem index="37" value="Snooping"/>
+                <StringItem index="38" value="Spirit Speak"/>
+                <StringItem index="39" value="Stealing"/>
+                <StringItem index="40" value="Swordsmanship"/>
+                <StringItem index="41" value="Tactics"/>
+                <StringItem index="42" value="Tailoring"/>
+                <StringItem index="43" value="Taste Identification"/>
+                <StringItem index="44" value="Tinkering"/>
+                <StringItem index="45" value="Tracking"/>
+                <StringItem index="46" value="Veterinary"/>
+                <StringItem index="47" value="Wrestling"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="combo6">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="48">
+                <StringItem index="0" value="Alchemy"/>
+                <StringItem index="1" value="Anatomy"/>
+                <StringItem index="2" value="Animal Lore"/>
+                <StringItem index="3" value="Animal Taming"/>
+                <StringItem index="4" value="Archery"/>
+                <StringItem index="5" value="Arms Lore"/>
+                <StringItem index="6" value="Begging"/>
+                <StringItem index="7" value="Blacksmithy"/>
+                <StringItem index="8" value="Bowcraft/Fletching"/>
+                <StringItem index="9" value="Camping"/>
+                <StringItem index="10" value="Carpentry"/>
+                <StringItem index="11" value="Cartography"/>
+                <StringItem index="12" value="Cooking"/>
+                <StringItem index="13" value="Detecting Hidden"/>
+                <StringItem index="14" value="Discordance"/>
+                <StringItem index="15" value="Evaluating Inteligence"/>
+                <StringItem index="16" value="Fencing"/>
+                <StringItem index="17" value="Fishing"/>
+                <StringItem index="18" value="Forensic Evaluation"/>
+                <StringItem index="19" value="Healing"/>
+                <StringItem index="20" value="Herding"/>
+                <StringItem index="21" value="Hiding"/>
+                <StringItem index="22" value="Inscription"/>
+                <StringItem index="23" value="Item Identification"/>
+                <StringItem index="24" value="Lockpicking"/>
+                <StringItem index="25" value="Lumberjacking"/>
+                <StringItem index="26" value="Mace Fighting"/>
+                <StringItem index="27" value="Magery"/>
+                <StringItem index="28" value="Meditation"/>
+                <StringItem index="29" value="Mining"/>
+                <StringItem index="30" value="Musicianship"/>
+                <StringItem index="31" value="Parrying"/>
+                <StringItem index="32" value="Peacemaking"/>
+                <StringItem index="33" value="Poisoning"/>
+                <StringItem index="34" value="Provocation"/>
+                <StringItem index="35" value="Remove Trap"/>
+                <StringItem index="36" value="Resisting Spells"/>
+                <StringItem index="37" value="Snooping"/>
+                <StringItem index="38" value="Spirit Speak"/>
+                <StringItem index="39" value="Stealing"/>
+                <StringItem index="40" value="Swordsmanship"/>
+                <StringItem index="41" value="Tactics"/>
+                <StringItem index="42" value="Tailoring"/>
+                <StringItem index="43" value="Taste Identification"/>
+                <StringItem index="44" value="Tinkering"/>
+                <StringItem index="45" value="Tracking"/>
+                <StringItem index="46" value="Veterinary"/>
+                <StringItem index="47" value="Wrestling"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="combo5">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="48">
+                <StringItem index="0" value="Alchemy"/>
+                <StringItem index="1" value="Anatomy"/>
+                <StringItem index="2" value="Animal Lore"/>
+                <StringItem index="3" value="Animal Taming"/>
+                <StringItem index="4" value="Archery"/>
+                <StringItem index="5" value="Arms Lore"/>
+                <StringItem index="6" value="Begging"/>
+                <StringItem index="7" value="Blacksmithy"/>
+                <StringItem index="8" value="Bowcraft/Fletching"/>
+                <StringItem index="9" value="Camping"/>
+                <StringItem index="10" value="Carpentry"/>
+                <StringItem index="11" value="Cartography"/>
+                <StringItem index="12" value="Cooking"/>
+                <StringItem index="13" value="Detecting Hidden"/>
+                <StringItem index="14" value="Discordance"/>
+                <StringItem index="15" value="Evaluating Inteligence"/>
+                <StringItem index="16" value="Fencing"/>
+                <StringItem index="17" value="Fishing"/>
+                <StringItem index="18" value="Forensic Evaluation"/>
+                <StringItem index="19" value="Healing"/>
+                <StringItem index="20" value="Herding"/>
+                <StringItem index="21" value="Hiding"/>
+                <StringItem index="22" value="Inscription"/>
+                <StringItem index="23" value="Item Identification"/>
+                <StringItem index="24" value="Lockpicking"/>
+                <StringItem index="25" value="Lumberjacking"/>
+                <StringItem index="26" value="Mace Fighting"/>
+                <StringItem index="27" value="Magery"/>
+                <StringItem index="28" value="Meditation"/>
+                <StringItem index="29" value="Mining"/>
+                <StringItem index="30" value="Musicianship"/>
+                <StringItem index="31" value="Parrying"/>
+                <StringItem index="32" value="Peacemaking"/>
+                <StringItem index="33" value="Poisoning"/>
+                <StringItem index="34" value="Provocation"/>
+                <StringItem index="35" value="Remove Trap"/>
+                <StringItem index="36" value="Resisting Spells"/>
+                <StringItem index="37" value="Snooping"/>
+                <StringItem index="38" value="Spirit Speak"/>
+                <StringItem index="39" value="Stealing"/>
+                <StringItem index="40" value="Swordsmanship"/>
+                <StringItem index="41" value="Tactics"/>
+                <StringItem index="42" value="Tailoring"/>
+                <StringItem index="43" value="Taste Identification"/>
+                <StringItem index="44" value="Tinkering"/>
+                <StringItem index="45" value="Tracking"/>
+                <StringItem index="46" value="Veterinary"/>
+                <StringItem index="47" value="Wrestling"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="combo4">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="48">
+                <StringItem index="0" value="Alchemy"/>
+                <StringItem index="1" value="Anatomy"/>
+                <StringItem index="2" value="Animal Lore"/>
+                <StringItem index="3" value="Animal Taming"/>
+                <StringItem index="4" value="Archery"/>
+                <StringItem index="5" value="Arms Lore"/>
+                <StringItem index="6" value="Begging"/>
+                <StringItem index="7" value="Blacksmithy"/>
+                <StringItem index="8" value="Bowcraft/Fletching"/>
+                <StringItem index="9" value="Camping"/>
+                <StringItem index="10" value="Carpentry"/>
+                <StringItem index="11" value="Cartography"/>
+                <StringItem index="12" value="Cooking"/>
+                <StringItem index="13" value="Detecting Hidden"/>
+                <StringItem index="14" value="Discordance"/>
+                <StringItem index="15" value="Evaluating Inteligence"/>
+                <StringItem index="16" value="Fencing"/>
+                <StringItem index="17" value="Fishing"/>
+                <StringItem index="18" value="Forensic Evaluation"/>
+                <StringItem index="19" value="Healing"/>
+                <StringItem index="20" value="Herding"/>
+                <StringItem index="21" value="Hiding"/>
+                <StringItem index="22" value="Inscription"/>
+                <StringItem index="23" value="Item Identification"/>
+                <StringItem index="24" value="Lockpicking"/>
+                <StringItem index="25" value="Lumberjacking"/>
+                <StringItem index="26" value="Mace Fighting"/>
+                <StringItem index="27" value="Magery"/>
+                <StringItem index="28" value="Meditation"/>
+                <StringItem index="29" value="Mining"/>
+                <StringItem index="30" value="Musicianship"/>
+                <StringItem index="31" value="Parrying"/>
+                <StringItem index="32" value="Peacemaking"/>
+                <StringItem index="33" value="Poisoning"/>
+                <StringItem index="34" value="Provocation"/>
+                <StringItem index="35" value="Remove Trap"/>
+                <StringItem index="36" value="Resisting Spells"/>
+                <StringItem index="37" value="Snooping"/>
+                <StringItem index="38" value="Spirit Speak"/>
+                <StringItem index="39" value="Stealing"/>
+                <StringItem index="40" value="Swordsmanship"/>
+                <StringItem index="41" value="Tactics"/>
+                <StringItem index="42" value="Tailoring"/>
+                <StringItem index="43" value="Taste Identification"/>
+                <StringItem index="44" value="Tinkering"/>
+                <StringItem index="45" value="Tracking"/>
+                <StringItem index="46" value="Veterinary"/>
+                <StringItem index="47" value="Wrestling"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="combo7">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="48">
+                <StringItem index="0" value="Alchemy"/>
+                <StringItem index="1" value="Anatomy"/>
+                <StringItem index="2" value="Animal Lore"/>
+                <StringItem index="3" value="Animal Taming"/>
+                <StringItem index="4" value="Archery"/>
+                <StringItem index="5" value="Arms Lore"/>
+                <StringItem index="6" value="Begging"/>
+                <StringItem index="7" value="Blacksmithy"/>
+                <StringItem index="8" value="Bowcraft/Fletching"/>
+                <StringItem index="9" value="Camping"/>
+                <StringItem index="10" value="Carpentry"/>
+                <StringItem index="11" value="Cartography"/>
+                <StringItem index="12" value="Cooking"/>
+                <StringItem index="13" value="Detecting Hidden"/>
+                <StringItem index="14" value="Discordance"/>
+                <StringItem index="15" value="Evaluating Inteligence"/>
+                <StringItem index="16" value="Fencing"/>
+                <StringItem index="17" value="Fishing"/>
+                <StringItem index="18" value="Forensic Evaluation"/>
+                <StringItem index="19" value="Healing"/>
+                <StringItem index="20" value="Herding"/>
+                <StringItem index="21" value="Hiding"/>
+                <StringItem index="22" value="Inscription"/>
+                <StringItem index="23" value="Item Identification"/>
+                <StringItem index="24" value="Lockpicking"/>
+                <StringItem index="25" value="Lumberjacking"/>
+                <StringItem index="26" value="Mace Fighting"/>
+                <StringItem index="27" value="Magery"/>
+                <StringItem index="28" value="Meditation"/>
+                <StringItem index="29" value="Mining"/>
+                <StringItem index="30" value="Musicianship"/>
+                <StringItem index="31" value="Parrying"/>
+                <StringItem index="32" value="Peacemaking"/>
+                <StringItem index="33" value="Poisoning"/>
+                <StringItem index="34" value="Provocation"/>
+                <StringItem index="35" value="Remove Trap"/>
+                <StringItem index="36" value="Resisting Spells"/>
+                <StringItem index="37" value="Snooping"/>
+                <StringItem index="38" value="Spirit Speak"/>
+                <StringItem index="39" value="Stealing"/>
+                <StringItem index="40" value="Swordsmanship"/>
+                <StringItem index="41" value="Tactics"/>
+                <StringItem index="42" value="Tailoring"/>
+                <StringItem index="43" value="Taste Identification"/>
+                <StringItem index="44" value="Tinkering"/>
+                <StringItem index="45" value="Tracking"/>
+                <StringItem index="46" value="Veterinary"/>
+                <StringItem index="47" value="Wrestling"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="statsPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Stats">
+              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder/>
+              </Border>
+            </TitledBorder>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="intSlider" min="-2" pref="92" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="intTextField" min="-2" pref="29" max="-2" attributes="0"/>
+                          <EmptySpace pref="18" max="32767" attributes="0"/>
+                          <Component id="toogleInt" min="-2" pref="43" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="intLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="strLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="dexLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="strSlider" min="-2" pref="92" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="strTextField" min="-2" pref="29" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="toogleStr" min="-2" pref="43" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="dexSlider" min="-2" pref="92" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="dexTextField" min="-2" pref="29" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="toogleDex" min="-2" pref="43" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="intTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="toogleInt" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="intLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="intSlider" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                          <Component id="strTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="toogleStr" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="strLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="strSlider" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                          <Component id="dexTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="toogleDex" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="dexLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="dexSlider" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="intLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Int"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSlider" name="intSlider">
+        </Component>
+        <Component class="javax.swing.JTextField" name="intTextField">
+        </Component>
+        <Component class="javax.swing.JLabel" name="strLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Str"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSlider" name="strSlider">
+        </Component>
+        <Component class="javax.swing.JTextField" name="strTextField">
+        </Component>
+        <Component class="javax.swing.JLabel" name="dexLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Dex"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JSlider" name="dexSlider">
+        </Component>
+        <Component class="javax.swing.JTextField" name="dexTextField">
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="toogleInt">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="L"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="toogleStr">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="L"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="toogleDex">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="L"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
