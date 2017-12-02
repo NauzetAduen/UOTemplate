@@ -12,6 +12,8 @@ import java.awt.Color;
  * @author nauzetaduen
  */
 public class MainFrame extends javax.swing.JFrame {
+    private int currentTotalStats = 75;
+    private final int MAX_STATS = 225;
     /**
      * Creates new form MainFrame
      */
@@ -340,22 +342,39 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void intSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_intSliderStateChanged
-        
-            intTextField.setText(String.valueOf(intSlider.getValue()));
-            setTotal(intSlider.getValue() + strSlider.getValue() + dexSlider.getValue());
-        
-        
+        if (isMaxed()) {
+            intSlider.setMaximum(intSlider.getValue());
+        } else {
+            intSlider.setMaximum(100);
+        }
+        intTextField.setText(String.valueOf(intSlider.getValue()));
+        currentTotalStats = intSlider.getValue() + strSlider.getValue() + dexSlider.getValue();
+        setTotal(currentTotalStats);
+
+
     }//GEN-LAST:event_intSliderStateChanged
 
     private void strSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_strSliderStateChanged
-            strTextField.setText(String.valueOf(strSlider.getValue()));
-            setTotal(intSlider.getValue() + strSlider.getValue() + dexSlider.getValue());
-        
+        if (isMaxed()) {
+            strSlider.setMaximum(strSlider.getValue());
+        } else {
+            strSlider.setMaximum(100);
+        }
+        strTextField.setText(String.valueOf(strSlider.getValue()));
+        currentTotalStats = intSlider.getValue() + strSlider.getValue() + dexSlider.getValue();
+        setTotal(currentTotalStats);
+
     }//GEN-LAST:event_strSliderStateChanged
 
     private void dexSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_dexSliderStateChanged
-            dexTextField.setText(String.valueOf(dexSlider.getValue()));
-            setTotal(intSlider.getValue() + strSlider.getValue() + dexSlider.getValue());
+        if (isMaxed()) {
+            dexSlider.setMaximum(dexSlider.getValue());
+        } else {
+            dexSlider.setMaximum(100);
+        }
+        dexTextField.setText(String.valueOf(dexSlider.getValue()));
+        currentTotalStats = intSlider.getValue() + strSlider.getValue() + dexSlider.getValue();
+        setTotal(currentTotalStats);
     }//GEN-LAST:event_dexSliderStateChanged
 
     private void toogleIntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toogleIntActionPerformed
@@ -389,6 +408,9 @@ public class MainFrame extends javax.swing.JFrame {
             totalLabel.setForeground(Color.black);
         }
         totalLabel.setText("Total: " + String.valueOf(total));
+    }
+    private boolean isMaxed(){
+        return MAX_STATS <= currentTotalStats;
     }
     /**
      * @param args the command line arguments
