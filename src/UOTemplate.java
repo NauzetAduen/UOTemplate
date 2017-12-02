@@ -29,6 +29,20 @@ public class UOTemplate {
         }
     }
 
+    public UOTemplate(String name, int inteligence, int strengh, int dexterity, ArrayList<String> skills) {
+        this.name = name;
+        this.inteligence = inteligence;
+        this.strengh = strengh;
+        this.dexterity = dexterity;
+        this.skills = skills;
+    }
+
+    @Override
+    public String toString() {
+        return "UOTemplate{" + "name=" + name + ", skills=" + skills + ", inteligence=" + inteligence + ", strengh=" + strengh + ", dexterity=" + dexterity + '}';
+    }
+    
+    
     public String getName() {
         return name;
     }
