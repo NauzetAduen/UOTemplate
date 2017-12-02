@@ -1,13 +1,13 @@
 
 import java.awt.Color;
-import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.imageio.ImageIO;
-import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -26,6 +26,7 @@ public class MainFrame extends javax.swing.JFrame {
     private int currentTotalStats = 75;
     private final int MAX_STATS = 225;
     private final ArrayList<String> skillList = new ArrayList<>();
+    private ArrayList<String> skillTemplate = new ArrayList<>();
     JFileChooser fileChooser = new JFileChooser();
     /**
      * Creates new form MainFrame
@@ -309,6 +310,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         saveMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, 0));
         saveMenuItem.setText("Save Template");
+        saveMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveMenuItemActionPerformed(evt);
+            }
+        });
         fileMenu.add(saveMenuItem);
         fileMenu.add(separatorMenuItems);
 
@@ -458,6 +464,33 @@ public class MainFrame extends javax.swing.JFrame {
             } catch (IOException ex) {}
         }
     }//GEN-LAST:event_loadMenuItemActionPerformed
+
+    private void saveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveMenuItemActionPerformed
+        // TODO add your handling code here:
+        setSkillTemplate();
+        if (fileChooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION) {
+            UOTemplate uot = new UOTemplate(templateTextField.getText(),
+                                            intSlider.getValue(),
+                                            strSlider.getValue(),
+                                            dexSlider.getValue(),
+                                            skillTemplate);
+            try {
+                writeFile(uot, fileChooser.getSelectedFile().getName());
+            } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+            }
+        }
+    }//GEN-LAST:event_saveMenuItemActionPerformed
+
+    public void setSkillTemplate() {
+        skillTemplate.clear();
+        skillTemplate.add((String) combo1.getSelectedItem());
+        skillTemplate.add((String) combo2.getSelectedItem());
+        skillTemplate.add((String) combo3.getSelectedItem());
+        skillTemplate.add((String) combo4.getSelectedItem());
+        skillTemplate.add((String) combo5.getSelectedItem());
+        skillTemplate.add((String) combo6.getSelectedItem());
+        skillTemplate.add((String) combo7.getSelectedItem());
+    }
     private void loadTemplate(UOTemplate uot){
         templateTextField.setText(uot.getName());
         combo1.setSelectedItem(uot.getSkills().get(0));
@@ -474,7 +507,19 @@ public class MainFrame extends javax.swing.JFrame {
         dexSlider.setValue(uot.getDexterity());
         dexTextField.setText(String.valueOf(uot.getDexterity()));
     }
-    
+    private void writeFile(UOTemplate uot, String filename) throws FileNotFoundException, UnsupportedEncodingException {
+        try (PrintWriter writer = new PrintWriter(filename, "UTF-8")) {
+            writer.println(uot.getName());
+            writer.println(uot.getInteligence());
+            writer.println(uot.getStrengh());
+            writer.println(uot.getDexterity());
+            for (String skill : uot.getSkills()) {
+                writer.println(skill);
+            }
+            writer.close();
+        }
+    }
+
     private String info(){
         return "Developer: Nauzet Hernández\nPurpose: Mattise Learning\nYear: 2017";
     }

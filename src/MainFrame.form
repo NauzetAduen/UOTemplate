@@ -27,6 +27,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Save Template"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveMenuItemActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="separatorMenuItems">
             </MenuItem>
