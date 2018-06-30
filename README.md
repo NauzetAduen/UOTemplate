@@ -1,6 +1,9 @@
 # UOTemplate
 Small app for generating UO templates.
 
+## Status
+Abandoned
+
 ## Getting Started
 Works for a tipical 7x server. 
 Generates a txt.
