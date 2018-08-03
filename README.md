@@ -1,5 +1,5 @@
 # UOTemplate
-Small app for generating UO templates.
+Small app for generating UO templates. Personal project
 
 ## Status
 Abandoned
